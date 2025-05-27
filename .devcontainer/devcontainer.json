@@ -1,12 +1,14 @@
 {
-  "name": "Sunshine with XFCE",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {},
+  "name": "Sunshine + XFCE for Moonlight Web",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [47984, 47989, 47990, 47998],
+  "postCreateCommand": "chmod +x sunshine-setup.sh && ./sunshine-setup.sh",
   "customizations": {
     "vscode": {
+      "settings": {},
       "extensions": []
     }
-  },
-  "postCreateCommand": "chmod +x .devcontainer/install_sunshine.sh && .devcontainer/install_sunshine.sh",
-  "remoteUser": "vscode"
+  }
 }

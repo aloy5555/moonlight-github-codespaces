@@ -1,0 +1,12 @@
+{
+  "name": "Sunshine with XFCE",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  },
+  "postCreateCommand": "chmod +x .devcontainer/install_sunshine.sh && .devcontainer/install_sunshine.sh",
+  "remoteUser": "vscode"
+}
